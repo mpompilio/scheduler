@@ -6,55 +6,55 @@ $(document).ready(function() {
 $('.saveBtn1').on('click', function(){
     var val = $(this).siblings('.description').val();
 
-        localStorage.setItem("task1", JSON.stringify(val));
+        localStorage.setItem("task1", val);
 
 });
 $('.saveBtn2').on('click', function(){
     var val = $(this).siblings('.description').val();
 
-        localStorage.setItem("task2", JSON.stringify(val));
+        localStorage.setItem("task2", val);
 
 });
 $('.saveBtn3').on('click', function(){
     var val = $(this).siblings('.description').val();
 
-        localStorage.setItem("task3", JSON.stringify(val));
+        localStorage.setItem("task3", val);
 
 });
 $('.saveBtn4').on('click', function(){
     var val = $(this).siblings('.description').val();
 
-        localStorage.setItem("task4", JSON.stringify(val));
+        localStorage.setItem("task4", val);
 
 });
 $('.saveBtn5').on('click', function(){
     var val = $(this).siblings('.description').val();
 
-        localStorage.setItem("task5", JSON.stringify(val));
+        localStorage.setItem("task5", val);
 
 });
 $('.saveBtn6').on('click', function(){
     var val = $(this).siblings('.description').val();
 
-        localStorage.setItem("task6", JSON.stringify(val));
+        localStorage.setItem("task6", val);
 
 });
 $('.saveBtn7').on('click', function(){
     var val = $(this).siblings('.description').val();
 
-        localStorage.setItem("task7", JSON.stringify(val));
+        localStorage.setItem("task7", val);
 
 });
 $('.saveBtn8').on('click', function(){
     var val = $(this).siblings('.description').val();
 
-        localStorage.setItem("task8", JSON.stringify(val));
+        localStorage.setItem("task8", val);
 
 });
 $('.saveBtn9').on('click', function(){
     var val = $(this).siblings('.description').val();
 
-        localStorage.setItem("task9", JSON.stringify(val));
+        localStorage.setItem("task9", val);
 
 });
 
@@ -68,10 +68,10 @@ $(time).each(function(index) {
    
 });
 
-//gets the time and compares it to the IDs on the textarea
+//gets the time and compares it to the IDs on the textares
 
 function getHour() {
-    var hour = 13;
+    var hour = moment().hours();
 
     $('.description').each(function() {
         var timeID = parseInt($(this).attr('id'))
@@ -81,7 +81,6 @@ function getHour() {
     } else if(hour > timeID){
         $(this).addClass('past');
     } else if(hour < timeID){
-
         $(this).addClass('future');
     }
 })
